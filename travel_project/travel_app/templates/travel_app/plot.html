@@ -1,0 +1,27 @@
+{% extends "travel_app/base.html" %}
+
+{% block head %}
+{{block.super}}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container text-center">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Django Plotly Example</a>
+      </nav>
+<!-- /.container -->
+
+<div class="card" style="width: 100%;margin-top: 15px">
+
+  <div class="card-body">
+      <h5 class="card-title">bla bla</h5>
+    {{map_travel|safe}}
+  </div>
+</div>
+<!-- /.container -->
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "travel_app/base.html" %}
+
+
+{% block page_header %}
+    <h1> Localisations </h1>
+{% endblock page_header %}
+
+
+
+{% block content %}
+    <ul>
+        {% for localisation in localisations %}
+        <li><h3>
+            <a href="{% url 'localisation' localisation.id %}">{{ localisation }}</a>
+        </h3></li>
+        {% empty %}
+        <li><h3> No localisations have been added</h3></li>
+        {% endfor %}
+    </ul>
+
+<h3><a href="#">Add a new localisation</a></h3>
+{% endblock content%}
